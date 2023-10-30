@@ -14,8 +14,9 @@ function ItemCount() {
 		count > 0 && setcount(prevstate => prevstate - 1)
 	}
 
-	const alerta =()=>toast(`Agregando al carrito ${count} productos`)
-
+	const alerta =()=>{
+		toast(`Agregando al carrito ${count} productos`);
+	}
 	return (
 		<>
 			<div className="inline-flex -space-x-px text-sm mr-3">

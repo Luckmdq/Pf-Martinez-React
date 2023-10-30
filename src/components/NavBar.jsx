@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { BsMinecart } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
+import  CartWidget  from "./CartWidget";
 
 function NavBar() {
 	const [triger, setTriger] = useState(false)
@@ -14,17 +14,7 @@ function NavBar() {
 					<span className="self-center text-2xl font-semibold whitespace-nowrap text-white">El Logo</span>
 				</a>
 				<div className="flex md:order-2 gap-3">
-
-					<button class="inline-flex items-center px-4 py-2.5 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-						<BsMinecart />
-
-						<span class="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
-							3
-						</span>
-					</button>
-
-
-
+					<CartWidget />
 					<button className="inline-flex items-center p-2 w-10 h-10 justify-center text-xl text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={toggle}>
 						<RxHamburgerMenu />
 					</button>

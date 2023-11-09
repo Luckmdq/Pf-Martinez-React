@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { ToastContainer, toast }	 from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
 function ItemCount() {
+
 	const [count, setcount] = useState(0);
 
 	const incress = () => {
@@ -14,7 +15,7 @@ function ItemCount() {
 		count > 0 && setcount(prevstate => prevstate - 1)
 	}
 
-	const alerta =()=>{
+	const alerta = () => {
 		toast(`Agregando al carrito ${count} productos`);
 	}
 	return (
@@ -29,7 +30,7 @@ function ItemCount() {
 
 			</div>
 			<button className=" ml-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={alerta}>Agregar</button>
-			<ToastContainer/>
+			<ToastContainer />
 		</>
 	)
 }

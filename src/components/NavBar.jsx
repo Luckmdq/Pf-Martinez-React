@@ -10,7 +10,7 @@ function NavBar() {
 	return (
 		<nav className="bg-gray-900 fixed w-100 z-20 top-0 left-0 right-0 border-b border-gray-600">
 			<div className="max-w flex flex-wrap items-center justify-between mx-auto p-4">
-				<a href="#" class="flex items-center">
+				<a href="#" className="flex items-center">
 					<span className="self-center text-2xl font-semibold whitespace-nowrap text-white">El Logo</span>
 				</a>
 				<div className="flex md:order-2 gap-3">

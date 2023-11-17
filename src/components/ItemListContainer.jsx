@@ -1,10 +1,15 @@
 import ItemCount from "./ItemCount"
 import ItemList from "./ItemList"
 import { React, useState, useEffect } from "react"
-import getProducts from "./getProducts";
+import getProducts from "./getProducts";/* 
+import { useParams } from "react-router-dom"; */
+
 
 const ItemListContainer = () => {
-
+	
+	/* Recibe la categoria para filtrar */
+	/* const {category}=useParams()
+ */
 	const [products, setProducts] = useState([])
 
 	useEffect(() => {

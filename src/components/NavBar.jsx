@@ -11,9 +11,9 @@ function NavBar() {
 	return (
 		<nav className="bg-gray-900 fixed w-100 z-20 top-0 left-0 right-0 border-b border-gray-600">
 			<div className="max-w flex flex-wrap items-center justify-between mx-auto p-4">
-				{/* <Link to="/" >
+				<Link to={"/"}>
 					<span className="self-center text-2xl font-semibold whitespace-nowrap text-white">El Logo</span>
-				</Link> */}
+				</Link>
 				<div className="flex md:order-2 gap-3">
 					<CartWidget />
 					<button className="inline-flex items-center p-2 w-10 h-10 justify-center text-xl text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" onClick={toggle}>

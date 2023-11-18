@@ -8,9 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <NavBar />
       <BrowserRouter>
+        <NavBar />
         <Routes>
 
           <Route exact path="/" element={<ItemListContainer />} /> 
@@ -18,7 +17,6 @@ const App = () => {
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
-    </>
   )
 }
 

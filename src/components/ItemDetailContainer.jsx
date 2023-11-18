@@ -1,15 +1,14 @@
 import ItemCount from "./ItemCount"
-import ItemList from "./ItemList"
+import ItemDetail from "./ItemDetail"
 import { React, useState, useEffect } from "react"
 import getProducts from "./getProducts";
-import { useParams } from "react-router-dom"; 
+import { useParams } from "react-router-dom";
 
 
-const ItemListContainer = () => {
-	
+const ItemDetailContainer = () => {
+
 	/* Recibe la categoria para filtrar */
-	/* const {category}=useParams()
- */
+	const { id } = useParams()
 	const [products, setProducts] = useState([])
 
 	useEffect(() => {
@@ -17,16 +16,22 @@ const ItemListContainer = () => {
 		getProducts().then((product) => setProducts(product))
 	}, [/* tiempo de espera no seria necesario por el await? */])
 
+	let item = products.find(elemento => elemento.id == id );
+
+
 
 	return (
 		<>
+			{console.log(`${item}`)}
 			<div className="max-w-sm mx-auto mt-10 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-				<ItemList productos={products}/>
+				 <ItemDetail 
+					titulo={item.title} 
+					imagen={item.image}
+				/> 
 				{/* Contador */}
-				<ItemCount />
 			</div>
 		</>
 	)
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

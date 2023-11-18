@@ -2,6 +2,7 @@ import { } from "react";
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 import Item from "./Item";
 
+/* mapea productos */
 
 
 const ItemList = ({ productos }) => {

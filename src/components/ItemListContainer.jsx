@@ -4,6 +4,7 @@ import { React, useState, useEffect } from "react"
 import getProducts from "./getProducts";
 import { useParams } from "react-router-dom"; 
 
+/* trae resultados de end point (logica) */
 
 const ItemListContainer = () => {
 	

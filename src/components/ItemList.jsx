@@ -1,13 +1,14 @@
 import { } from "react";
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 import Item from "./Item";
+import { useParams } from "react-router-dom";
 
 /* mapea productos */
 
 
 const ItemList = ({ productos }) => {
+	const {category}=useParams()
 
-	
 
 	/* por defecto */
 	return (

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const Item = ({ id, titulo, imagen, precio }) => {
 
 	return (
-		<div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+		<div className="w-full grid gap-y-5 justify-items-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 			<h5 className="text-xl ml-4 font-semibold tracking-tight text-gray-900 dark:text-white">{titulo}</h5>
-			<img className="p-8 rounded" src={imagen} alt="product image" />
+			<img className="p-8 rounded max-h-52" src={imagen} alt="product image" />
 			<div className="px-5 pb-5">
 				<div className="flex items-center justify-between">
 					<span className="text-3xl font-bold text-gray-900 dark:text-white">${precio}</span>

@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { CartContext } from "../context/CartContext";
 
 
-const ItemCount=({itemId}) => {
+const ItemCount=({itemId,valor}) => {
 	const {addCart} = useContext(CartContext)
 
 	const [count, setcount] = useState(0);
@@ -19,11 +19,11 @@ const ItemCount=({itemId}) => {
 
 	const alerta = () => {
 		toast(`Agregando al carrito ${count} productos`);
-		addCart(itemId,count);
+		addCart(itemId,count,valor);
 		setcount(0);
 	}
 	return (
-		<div className="">
+		<>
 			<div className="inline-flex -space-x-px text-sm mr-3">
 				<button className="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={decress}>-</button>
 
@@ -35,7 +35,7 @@ const ItemCount=({itemId}) => {
 			</div>
 			<button className=" ml-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={alerta}>Agregar</button>
 			<ToastContainer />
-		</div>
+		</>
 	)
 }
 

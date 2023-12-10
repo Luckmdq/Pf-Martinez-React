@@ -5,7 +5,6 @@ import getProducts from "./getProducts";
 
 function CartWidget () {
 	const productos=getProducts();
-	console.log(productos)
 
 	const {cantidadTotal} = useContext(CartContext)
 	return (

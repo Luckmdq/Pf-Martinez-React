@@ -11,9 +11,8 @@ export const CartProvider = ({ children }) => {
 		localStorage.setItem("cart",JSON.stringify(cart))
 	},[cart])
 
-	const addCart = (itemId, cantidad) => {
-		const addProduct = { itemId, cantidad };
-		console.log(addProduct)
+	const addCart = (itemId, cantidad,valor) => {
+		const addProduct = { itemId, cantidad,valor };
 		const products = [...cart];
 		const producto = products.find(e => e.itemId === addProduct.itemId);
 		producto ? producto.cantidad += cantidad : products.push(addProduct)
@@ -25,7 +24,7 @@ export const CartProvider = ({ children }) => {
 	}
 
 	const precioTotal = () => {
-		return cart.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
+		return cart.reduce((acc, prod) => acc + (prod.valor * prod.cantidad), 0)
 	}
 
 	const vaciarCarrito = () => {

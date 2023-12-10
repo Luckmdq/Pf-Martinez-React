@@ -14,7 +14,7 @@ const ItemDetail = ({ productos }) => {
 						<h5 className="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">{elemento.title}</h5>
 						<img className=" rounded max-h-40" src={elemento.image} alt="product image" />
 						<p className="text-sm font-normal text-gray-700 dark:text-gray-400 ">{elemento.description}</p>
-						<ItemCount />
+						<ItemCount itemId={elemento.id} />
 					</div>
 				)
 			})}
